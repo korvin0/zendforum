@@ -1,0 +1,1 @@
+<h2>Category List:</h2><?php foreach ($this->categories as $v):?><div class="category_row"><a href="<?php echo $this->url(array('controller'=>'category', 'id'=>$v->id),'default',true) ?>"><?php echo $v->name?></a></div><?php endforeach?>

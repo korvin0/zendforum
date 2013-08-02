@@ -1,0 +1,11 @@
+<?php $this->placeholder('authblock')->captureStart() ?>
+    <?php $auth = Zend_Auth::getInstance();?>
+    <?php if ($auth->hasIdentity()): ?>
+        signed in as <?php echo $auth->getIdentity()?>
+    <?php else: ?>
+        <div style="float: right">
+            <?php echo $this->loginForm?>
+            <a href="<?php echo $this->url(array('controller'=>'auth'),'default',true) ?>">Sign In</a> <b>&middot;</b><a href="<?php echo $this->url(array('controller'=>'register'),'default',true) ?>">Sign Up</a>
+        </div>
+    <?php endif ?>
+<?php $this->placeholder('authblock')->captureEnd() ?>

@@ -1,0 +1,18 @@
+.category_row, .topic_row, .post_row {
+    background: #eee;
+    border:1px solid #ddd;
+    padding:10px;
+    margin:5px;
+}
+
+.post_header {
+    background: #ccc;
+    padding:2px;
+    font-size:90%;
+    border-bottom:1px solid #999;
+    margin-bottom:5px;
+}
+
+#header {
+    margin-bottom:15px;
+}

@@ -1,0 +1,85 @@
+<!-- application/layouts/scripts/layout.phtml -->
+
+<?php echo $this->doctype() ?>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>Zend Forum</title>
+
+  <?php echo $this->headLink()->appendStylesheet('/css/style.css') ?>
+  <?php echo $this->headScript()->appendFile('/js/jquery.js') ?>
+  
+  
+<script>
+$(document).ready(function(){
+    $('#postform').submit(function(){
+        var res = [];
+        if ($('#body').val() == '') res.push('You must enter post body!');
+        if (res.length > 0)
+        {
+            alert(res.join("\r\n"));
+            return false;
+        }
+    });
+    
+    $('#loginform').submit(function(){
+        var res = [];
+        if ($('#username').val() == '') res.push('You must enter username!');
+        if ($('#password').val() == '') res.push('You must enter password!');
+        if (res.length > 0)
+        {
+            alert(res.join("\r\n"));
+            return false;
+        }
+    });
+    
+    $('#registerform').submit(function(){
+        var res = [];
+        if ($('#user').val() == '') res.push('You must enter username!');
+        if ($('#pass').val() == '') res.push('You must enter password!');
+        if ($('#pass').val() != $('#pass2').val()) res.push('The password is repeated incorrectly!');
+        if (res.length > 0)
+        {
+            alert(res.join("\r\n"));
+            return false;
+        }
+    });
+});
+</script>
+
+
+</head>
+
+<body>
+
+<div class="content">
+<div id="header" style="background-color: #EEEEEE;">
+
+    <div id="header-logo">
+
+        <b>Zend Forum</b>
+
+    </div>
+    
+    <?php
+    
+    echo $this->placeholder('authblock')
+    ?>
+    
+
+</div>
+
+
+
+
+<?php echo $this->layout()->content ?>
+
+</div> 
+
+</body>
+
+</html>
