@@ -6,10 +6,6 @@
         <directory>./library</directory>
     </testsuite>
     
-    <testsuite name="Main Test Suite">
-        <directory>./</directory>
-    </testsuite>
-    
     <filter>
         <!-- If Zend Framework is inside your project's library, uncomment this filter -->
         <!-- 

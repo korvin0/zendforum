@@ -10,12 +10,12 @@ class IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         // action body
-        
+
         //$postmapper = new Application_Model_PostMapper();
         //$topicmapper = new Application_Model_TopicMapper();
         //$categorymapper = new Application_Model_categoryMapper();
         //$usermapper = new Application_Model_UserMapper();
-        
+
         //$post = $postmapper->find(1);
         //$this->view->content = $topicmapper->findCategory(1)->getName();
         
